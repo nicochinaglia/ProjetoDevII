@@ -24,7 +24,7 @@ ________________________________________________________________________________
 
 ## Estrutura do projeto
 
-![Estrutura do projeto](https://github.com/nicochinaglia/ProjetoDevII/tree/master/imagens/github.jpg)
+![github](https://user-images.githubusercontent.com/71404049/144319234-794d9b00-a1a4-4d73-ab43-a0b8ad6142ac.jpg)
 
 ______________________________________________________________________________________________________________________________________ 
 
