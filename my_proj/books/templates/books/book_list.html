@@ -1,0 +1,26 @@
+<h1>Livros</h1>
+
+<table border="1">
+<thead>
+    <tr>
+    <th>Nome</th>
+    <th>Páginas</th>
+    <th>Ver</th>
+    <th>Editar</th>
+    <th>Deletar</th>
+    </tr>
+</thead>
+<tbody>
+    {% for book in object_list %}
+    <tr>
+    <td>{{ book.name }}</td>
+    <td>{{ book.pages }}</td>
+    <td><a href="{% url "book_view" book.id %}">ver</a></td>
+    <td><a href="{% url "book_edit" book.id %}">editar</a></td>
+    <td><a href="{% url "book_delete" book.id %}">deletar</a></td>
+    </tr>
+    {% endfor %}
+</tbody>
+</table>
+
+<a href="{% url "book_new" %}">Novo livro</a>

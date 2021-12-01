@@ -1,21 +1,9 @@
-from django.http import HttpResponse
 from django.db import models
-from django.urls import reverse
-
-
-class Post(models.Model):
-    title = models.CharField(max_length=255)
-    slug = models.SlugField(max_length=255, unique=True)
-    author = models.CharField(max_length=255)
-    recipe = models.TextField()
-    created = models.DateTimeField(auto_now_add=True)
-    updated = models.DateTimeField(auto_now=True)
-
-    class Meta:
-        ordering = ("-created",)
-
-    def __str__(self):
-        return self.title
-
-    def get_absolute_url(self):
-        return reverse("blog:detail", kwargs={"slug": self.slug})
+ 
+class Employee(models.Model):  
+    name = models.CharField(max_length=100)  
+    email = models.EmailField()  
+    contact = models.CharField(max_length=15) 
+  
+    class Meta:  
+        db_table = "employee"
