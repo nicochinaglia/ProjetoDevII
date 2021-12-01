@@ -1,0 +1,26 @@
+<h1>Cadastro de alunos</h1>
+
+<table border="1">
+<thead>
+    <tr>
+    <th>Nome</th>
+    <th>RA</th>
+    <th>Detalhes</th>
+    <th>Editar</th>
+    <th>Deletar</th>
+    </tr>
+</thead>
+<tbody>
+    {% for aluno in object_list %}
+    <tr>
+    <td>{{ aluno.name }}</td>
+    <td>{{ aluno.ra }}</td>
+    <td><a href="{% url "aluno_view" aluno.id %}">detalhes</a></td>
+    <td><a href="{% url "aluno_edit" aluno.id %}">editar</a></td>
+    <td><a href="{% url "aluno_delete" aluno.id %}">deletar</a></td>
+    </tr>
+    {% endfor %}
+</tbody>
+</table>
+
+<a href="{% url "aluno_new" %}">Novo aluno</a>
