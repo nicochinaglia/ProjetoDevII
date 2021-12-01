@@ -1,5 +1,9 @@
-from django.http import HttpResponse
+from django.views.generic import DetailView, ListView
 
+from .models import Post
 
-def index(request):
-    return HttpResponse("Hello, world. Funcionou! =).")
+class PostListView(ListView):
+    model = Post
+
+class PostDetailView(DetailView):
+    model = Post    
